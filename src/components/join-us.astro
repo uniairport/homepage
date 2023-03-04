@@ -1,5 +1,6 @@
 ---
 import ContentSection from "~/components/content-section.astro";
+import { Icon } from "astro-icon";
 ---
 
 <ContentSection title="Join us" id="join-us">
@@ -8,4 +9,11 @@ import ContentSection from "~/components/content-section.astro";
       class="text-primary">surfing the Internet</span
     >.
   </Fragment>
+  <a
+    href="https://portal.uninetwork.top/"
+    class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+  >
+    <Icon pack="mdi" name="plus-circle" class="h-8" />
+    <span>Register</span>
+  </a>
 </ContentSection>
