@@ -1,0 +1,49 @@
+---
+import PricingList from "~/components/pricing-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { PriceItem } from "~/types";
+
+const prices: Array<PriceItem> = [
+  {
+    title: "小學",
+    currency: "cny",
+    price: 8,
+    duration: "month",
+    features: [
+      "Tunnel Accessibility",
+      "100 GiB Traffic",
+      "Stream Services Unlocked",
+    ],
+  },
+  {
+    title: "高中",
+    currency: "cny",
+    price: 35,
+    duration: "month",
+    features: [
+      "Tunnel Accessibility",
+      "700 GiB Traffic",
+      "Stream Services Unlocked",
+    ],
+  },
+  {
+    title: "用完為止流量包",
+    currency: "cny",
+    price: 36,
+    duration: "unlimited",
+    features: [
+      "Tunnel Accessibility",
+      "250 GiB Traffic",
+      "Stream Services Unlocked",
+    ],
+  },
+];
+---
+
+<ContentSection title="Pricing" id="pricing">
+  <Fragment slot="lead">
+    Uni Network always offer <span class="text-primary">reasonable prices</span
+    >, never too expensive.
+  </Fragment>
+  <PricingList items={prices} />
+</ContentSection>

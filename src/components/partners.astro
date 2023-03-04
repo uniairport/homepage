@@ -1,0 +1,42 @@
+---
+import PartnersList from "~/components/partners-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { PartnerItem } from "~/types";
+
+const partners: Array<PartnerItem> = [
+  {
+    title: "China Telecom",
+    icon: "partners/chinatelecom",
+  },
+  {
+    title: "Texon",
+    icon: "partners/texon",
+  },
+  {
+    title: "SK Telecom",
+    icon: "partners/sktelecom",
+  },
+  {
+    title: "Singtel",
+    icon: "partners/singtel",
+  },
+  {
+    title: "PCCW",
+    icon: "partners/pccw",
+  },
+  {
+    title: "NTT",
+    icon: "partners/ntt",
+  },
+];
+---
+
+<ContentSection title="Partners" id="partners">
+  <Fragment slot="lead">
+    Uni Network has partnered with the following providers to give you <span class="text-primary">the best possible experience</span>.
+  </Fragment>
+  <PartnersList
+    items={partners}
+    title="Partners"
+  />
+</ContentSection>

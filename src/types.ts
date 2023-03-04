@@ -1,7 +1,6 @@
-export interface CompatibilityItem {
+export interface PartnerItem {
   icon: string;
   title: string;
-  url: string;
 }
 
 export interface FeatureItem {
@@ -21,8 +20,10 @@ export interface NavItem {
   url: string;
 }
 
-export interface ShowcaseSite {
+export interface PriceItem {
   title: string;
-  image: ImageMetadata;
-  url: string;
+  currency: "cny" | "usd";
+  price: number;
+  duration: "month" | "season" | "year" | "unlimited";
+  features: string[];
 }

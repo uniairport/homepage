@@ -1,0 +1,32 @@
+---
+import type { PriceItem } from "~/types";
+
+export interface Props {
+  items: Array<PriceItem>;
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  {
+    items.map(({ title, currency, price, duration, features }) => (
+      <li class="flex flex-col items-center gap-4 border border-default bg-offset p-[4.5rem]">
+        <p>{title}</p>
+
+        <p class="text-6xl font-bold">
+          {price}
+          <span class="text-base font-medium">{currency.toUpperCase()}</span>
+        </p>
+        <p class="text-xs text-slate-500">
+          {duration === "unlimited" ? "unlimited" : `per ${duration}`}
+        </p>
+        <ul>
+          {features.map((feature) => (
+            <li class="text-offset">{feature}</li>
+          ))}
+        </ul>
+      </li>
+    ))
+  }
+</ul>

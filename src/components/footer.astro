@@ -5,33 +5,28 @@ import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
   {
-    url: "https://astro.build/",
-    description: "Astro's official website",
+    url: "https://uninetwork.top/",
+    description: "Uni Network's official website",
     icon: "mdi:home",
   },
   {
-    url: "https://github.com/mhyfritz/astro-landing-page",
+    url: "https://github.com/CQBerry/uninetwork_homepage",
     description: "View source on GitHub",
     icon: "fa-brands:github-alt",
   },
   {
-    url: "https://astro.build/chat",
-    description: "Astro on Discord",
-    icon: "fa-brands:discord",
-  },
-  {
-    url: "https://twitter.com/astrodotbuild",
-    description: "Astro on Twitter",
-    icon: "fa-brands:twitter",
+    url: "https://t.me/CMUnichuishui",
+    description: "Uni Network on Telegram",
+    icon: "fa-brands:telegram",
   },
 ];
 ---
 
-<footer class="relative flex h-64 items-center justify-center">
+<footer class="relative flex h-64 items-center justify-center flex-wrap p-8">
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>
-  <ul class="relative grid grid-cols-2 gap-4 sm:grid-cols-4">
+  <ul class="relative grid gap-4 grid-cols-3 mr-5">
     {
       links.map((link) => (
         <li>
@@ -46,4 +41,5 @@ const links: Array<FooterLink> = [
       ))
     }
   </ul>
+  <p>Copyright 2013-2022 Uni Network Inc | All Rights Reserved</p>
 </footer>

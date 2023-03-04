@@ -1,12 +1,12 @@
 ---
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
+  { title: "Dashboard", url: "https://portal.uninetwork.top/" },
   { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+  { title: "Partners", url: "#partners" },
+  { title: "Pricing", url: "#pricing" },
 ];
 ---
 
@@ -15,9 +15,9 @@ const navItems: Array<NavItem> = [
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
-    <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <h1 class="sr-only">Uni Network</h1>
+    <img src="favicon.png" alt="logo" class="h-10" />
+    <p>Uni Network</p>
   </a>
   <div>
     <div class="flex items-center gap-6">
@@ -42,7 +42,6 @@ const navItems: Array<NavItem> = [
       >
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
-      <ThemeSwitcher />
     </div>
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
       <div class="fixed inset-0 bg-default px-8 py-4 text-default">
@@ -57,9 +56,6 @@ const navItems: Array<NavItem> = [
               <Icon pack="mdi" name="close" class="h-8" />
             </button>
           </header>
-          <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
-          </div>
           <nav>
             <ul class="flex flex-col">
               {

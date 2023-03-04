@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon";
+import type { PartnerItem } from "~/types";
+
+export interface Props {
+  items: Array<PartnerItem>;
+  title: string;
+}
+
+const { items, title } = Astro.props;
+---
+
+<div class="w-full max-w-6xl space-y-2">
+  <div class="relative border border-default bg-offset px-6 pt-8 pb-4">
+    <h3
+      class="absolute top-0 right-4 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs"
+    >
+      {title}
+    </h3>
+    <ul class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6 p-8">
+      {
+        items.map((item) => (
+          <li class="flex flex-col items-center gap-2">
+            <Icon class="h-12" name={item.icon} />
+            <span class="text-offset">{item.title}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
