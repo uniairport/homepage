@@ -11,7 +11,7 @@ const { items } = Astro.props;
 <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
   {
     items.map(({ title, currency, price, duration, features }) => (
-      <li class="flex flex-col items-center gap-4 border border-default bg-offset p-[4.5rem]">
+      <li class="flex flex-col items-center gap-4 border border-default bg-offset p-16">
         <p>{title}</p>
 
         <p class="text-6xl font-bold">
