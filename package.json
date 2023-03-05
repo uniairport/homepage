@@ -22,6 +22,7 @@
     "prettier-plugin-astro": "^0.8.0",
     "prettier-plugin-tailwindcss": "^0.2.0",
     "rimraf": "^4.1.2",
+    "svgo": "^2.8.0",
     "tailwindcss-fluid-type": "^2.0.3"
   },
   "dependencies": {
