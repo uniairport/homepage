@@ -14,11 +14,11 @@ const { items } = Astro.props;
       <li class="flex flex-col items-center gap-4 border border-default bg-offset p-16">
         <p>{title}</p>
 
-        <p class="text-6xl font-bold">
+        <p class="font-bold text-5xl">
           {price}
-          <span class="text-base font-medium">{currency.toUpperCase()}</span>
+          <span class="font-medium text-base">{currency.toUpperCase()}</span>
         </p>
-        <p class="text-xs text-slate-500">
+        <p class="text-slate-500 text-xs">
           {duration === "unlimited" ? "unlimited" : `per ${duration}`}
         </p>
         <ul>
