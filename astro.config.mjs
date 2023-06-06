@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://front.uninetwork.top/",
+  site: "https://front.sexyuni.org/",
   integrations: [
     tailwind(),
     image({

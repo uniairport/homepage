@@ -4,44 +4,44 @@ import HeroImage from "~/components/hero-image.astro";
 import type { FooterLink } from "~/types";
 
 const links: Array<FooterLink> = [
-  {
-    url: "https://uninetwork.top/",
-    description: "Uni Network's official website",
-    icon: "mdi:home",
-  },
-  {
-    url: "https://github.com/CQBerry/uninetwork_homepage",
-    description: "View source on GitHub",
-    icon: "fa-brands:github-alt",
-  },
-  {
-    url: "https://t.me/CMUnichuishui",
-    description: "Uni Network on Telegram",
-    icon: "fa-brands:telegram",
-  },
+    {
+        url: "https://sexyuni.org/",
+        description: "Uni Network's official website",
+        icon: "mdi:home",
+    },
+    {
+        url: "https://github.com/CQBerry/uninetwork_homepage",
+        description: "View source on GitHub",
+        icon: "fa-brands:github-alt",
+    },
+    {
+        url: "https://t.me/CMUnichuishui",
+        description: "Uni Network on Telegram",
+        icon: "fa-brands:telegram",
+    },
 ];
 ---
 
-<footer class="relative flex h-64 items-center justify-center flex-wrap p-8">
-  <div class="absolute inset-0 overflow-hidden opacity-40">
-    <HeroImage />
-  </div>
-  <ul class="relative grid gap-4 grid-cols-3 mr-5">
-    {
-      links.map((link) => (
-        <li>
-          <a
-            class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
-            href={link.url}
-          >
-            <span class="sr-only">{link.description}</span>
-            <Icon class="h-full" name={link.icon} />
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-  <p class="text-xs md:text-sm lg:text-base">
-    Copyright 2013-2022 Uni Network Inc | All Rights Reserved
-  </p>
+<footer class="relative flex h-64 flex-wrap items-center justify-center p-8">
+    <div class="absolute inset-0 overflow-hidden opacity-40">
+        <HeroImage />
+    </div>
+    <ul class="relative mr-5 grid grid-cols-3 gap-4">
+        {
+            links.map((link) => (
+                <li>
+                    <a
+                        class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
+                        href={link.url}
+                    >
+                        <span class="sr-only">{link.description}</span>
+                        <Icon class="h-full" name={link.icon} />
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+    <p class="text-xs md:text-sm lg:text-base">
+        Copyright 2013-2022 Uni Network Inc | All Rights Reserved
+    </p>
 </footer>
